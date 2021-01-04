@@ -1,0 +1,8 @@
+com\everis\app\config\SwaggerConfig.class
+com\everis\app\WsAppApplication.class
+com\everis\app\config\RestClientConfiguration.class
+com\everis\app\service\FilmServiceImpl.class
+com\everis\app\entity\Film.class
+com\everis\app\service\IFilmService.class
+com\everis\app\controller\FilmController.class
+com\everis\app\config\clientes\IFilmClienteApi.class

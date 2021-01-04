@@ -1,0 +1,4 @@
+com\everis\app\controller\FilmControllerTest.class
+com\everis\app\cliente\FilmClienteApi.class
+com\everis\app\SwaggerConfig.class
+com\everis\app\WsAppApplicationTests.class
