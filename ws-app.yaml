@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metada:
+  name: ws-app
+  labels:
+    app: ws-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ws-app
+  template:
+    metadata:
+      labels:
+        app: ws-app
+    spec:
+      containers:
+        - name: dummy
+          image: acrajbc01.azurecr.io/ws-app
+          resources:
+            memory: "256Mi"
+            cpu: "250m" 
+    imagePullSecrets:
+      - name: regcred
+
+
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: ws-app
+spec:
+  selector:
+    app: ws-app
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
